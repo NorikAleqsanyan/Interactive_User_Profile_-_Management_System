@@ -1,0 +1,24 @@
+{{>menuAdmin}}
+<div class="container mt-5">
+  <h2>Categories</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each categories}}
+        <tr>
+          <td>{{name}}</td>
+          <td><img src="/{{image}}" class="img-thumbnail" width="100" alt=""></td>
+          <td><a href="/admin/editCategory/{{id}}" class="btn btn-warning btn-sm">Update</a></td>
+          <td><a href="/admin/deleteCategory/{{id}}" class="btn btn-danger btn-sm">Delete</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
